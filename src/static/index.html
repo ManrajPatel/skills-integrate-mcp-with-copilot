@@ -18,6 +18,23 @@
     <main>
       <section id="activities-container">
         <h3>Available Activities</h3>
+
+        <div id="activities-toolbar" class="toolbar">
+          <input type="search" id="search" placeholder="Search activities" />
+
+          <select id="category-filter">
+            <option value="">All categories</option>
+          </select>
+
+          <select id="sort-by">
+            <option value="name_asc">Sort: Name ↑</option>
+            <option value="name_desc">Sort: Name ↓</option>
+            <option value="schedule">Sort: Schedule</option>
+          </select>
+
+          <button id="clear-filters" class="small">Clear</button>
+        </div>
+
         <div id="activities-list">
           <!-- Activities will be loaded here -->
           <p>Loading activities...</p>

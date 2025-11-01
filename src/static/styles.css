@@ -77,6 +77,27 @@ section h3 {
   color: #1a237e;
 }
 
+/* Toolbar styles for filters/search */
+.toolbar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.toolbar input[type="search"], .toolbar select {
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.toolbar .small {
+  padding: 6px 8px;
+  font-size: 13px;
+}
+
 .activity-card {
   margin-bottom: 15px;
   padding: 15px;
