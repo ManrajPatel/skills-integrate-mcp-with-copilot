@@ -12,21 +12,41 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f5f5f5;
+  /* subtle branch-like animated lines in the background (very low opacity)
+     to give a gentle Git-style background while keeping content readable */
+  background-color: #ffffff;
+  background-image: repeating-linear-gradient(135deg, rgba(31,136,61,0.03) 0 2px, transparent 2px 60px);
+  animation: moveLines 120s linear infinite;
+}
+
+@keyframes moveLines {
+  from { background-position: 0 0; }
+  to { background-position: 1000px 0; }
 }
 
 header {
-  text-align: center;
-  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px;
   margin-bottom: 30px;
-  background-color: #1a237e;
-  color: white;
+  background-color: #ffffff; /* school color: white */
+  color: #1f883d; /* school accent: lime green */
   border-radius: 5px;
+  border: 2px solid rgba(31,136,61,0.08);
 }
 
-header h1 {
-  margin-bottom: 10px;
+.mascot {
+  width: 88px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
+
+.titles h1, .titles h2 { margin: 0; }
+
+.titles h1 { font-size: 1.6rem; color: #1f883d; }
+.titles h2 { font-size: 1rem; color: #4b4b4b; }
 
 main {
   display: flex;
@@ -67,7 +87,7 @@ section h3 {
 
 .activity-card h4 {
   margin-bottom: 10px;
-  color: #0066cc;
+  color: #1f883d; /* use lime green for headings */
 }
 
 .activity-card p {
@@ -150,18 +170,18 @@ section h3 {
 }
 
 button {
-  background-color: #1a237e;
+  background-color: #1f883d; /* lime green */
   color: white;
   border: none;
   padding: 10px 15px;
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background-color 0.15s;
 }
 
 button:hover {
-  background-color: #3949ab;
+  background-color: #166b2a;
 }
 
 .message {
